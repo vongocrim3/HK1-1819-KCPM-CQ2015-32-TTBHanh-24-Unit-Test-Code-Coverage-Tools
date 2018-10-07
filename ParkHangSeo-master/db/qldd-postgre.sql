@@ -553,4 +553,3 @@ CREATE TRIGGER trigger_insert_attendance_detail
     AFTER INSERT ON attendance_detail
     FOR EACH ROW
 	EXECUTE PROCEDURE when_insert_attendance_detail();
-
