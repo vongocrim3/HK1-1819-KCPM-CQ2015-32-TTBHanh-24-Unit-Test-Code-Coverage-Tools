@@ -291,6 +291,7 @@ var insert_users = [
     ['Thái', 'Thiện', '1553008@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //143
     ['Nguyễn Bảo', 'Minh', '1553009@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //144
     ['Trịnh Hoàng', 'Triều', '1553010@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //145
+	
     //14CLC
     ['Lê Minh', 'Trí', '1453001@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //146
     ['Nguyễn Quang Minh', 'Trí', '1453002@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //147
@@ -320,14 +321,18 @@ var insert_users = [
     ['Nguyễn Thị Minh', 'Phúc', 'ntmphuc@fit.hcmus.edu.vn', '01228718705', bcrypt.hashSync('ntmphuc', 10), 3], //169
 
     ['Park Hang', 'Seo', 'parkhangseo@fit.hcmus.edu.vn', '01228718705', bcrypt.hashSync('korea', 10), 4], //170
-
-    //['Huỳnh Hữu', 'Nghĩa', '1412572@student.hcmus.edu.vn', '01228718705', bcrypt.hashSync('1353019', 10), 1], //171
+	
+	['Nhóm 24', 'Teacher', 'teacher@fit.hcmus.edu.vn', '090xxxx', bcrypt.hashSync('teacher', 10), 2], //171
+	['Nhóm 24', 'Student', 'student@student.hcmus.edu.vn', '0375555555', bcrypt.hashSync('student', 10), 1], //172
+	['Nhóm 24', 'Admin', 'admin@student.hcmus.edu.vn', '0375555555', bcrypt.hashSync('admin', 10), 1], //173
+	
 ];
 //[teacher_id,course_id,teacher_role],
 var insert_teacher_teach_course = [
     ['1', '1', '0'],
     ['17', '1', '1'],
     ['18', '1', '1'],
+	['171', '1', '1'],
 
     ['2', '2', '0'],
     ['19', '2', '1'],
@@ -568,7 +573,7 @@ var insert_students = [
     [165, '1353010', '13'], //165
     [166, '1353011', '13'], //166
     [167, '1353012', '13'], //167
-    //[171, '1353019', '13'], //171
+    [172, 'student', '11'], //172
 ];
 //[course_id , student_id]
 var insert_student_enroll_course = [
@@ -1362,6 +1367,7 @@ var seeding_postgres = function(res) {
 
 var insert_admin = [
     ['Park Hang', 'Seo', 'parkhangseo@fit.hcmus.edu.vn', '01228718705', bcrypt.hashSync('korea', 10), 4], //1
+	['Nhóm 24', 'Admin', 'admin@fit.hcmus.edu.vn', '0123456789', bcrypt.hashSync('admin', 10), 4], //2
 ];
 var seeding_admin = function(res) {
     pool_postgres.connect(function(error, connection, done) {
